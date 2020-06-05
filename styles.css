@@ -1,18 +1,15 @@
-body,
-#app {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+body {
+    padding: 0 0 0 5em;
     font-family: 'Caveat', cursive;
-}
-
-#app {
-    min-width: 200px;
-    width: 20%;
-    flex-direction: column;
     background-color: #fff;
     background-image: linear-gradient(90deg, transparent 13px, #abced4 15px, #abced4 12px, transparent 10px), linear-gradient(#eee .1em, transparent .1em);
     background-size: 100% 1.27em;
+}
+
+#app {
+    min-width: 20em;
+    width: 20%;
+    flex-direction: column;
 }
 
 ul {
