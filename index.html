@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Vuki</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{ title }}</h1>
+        <ul id="shopping-list">
+            <li v-for="(item, index) in items">
+                <input class="shopping-list-item" type="checkbox" v-bind:id="index" v-bind:name="item.name" v-bind:value="item.name" v-model="item.checked">
+                <label v-bind:for="index">{{ item.name }}</label>
+            </li>
+        </ul>
+        <button v-if="isAllChecked()" v-on:click="uncheckAll">
+      Reset
+    </button>
+    </div>
+    <script src='main.js'></script>
+</body>
+
+</html>
